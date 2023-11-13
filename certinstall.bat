@@ -1,0 +1,1 @@
+@powershell.exe -file "certinstall.ps1"
