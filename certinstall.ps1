@@ -2,9 +2,15 @@
 
    $wshell = New-Object -ComObject Wscript.Shell
    $exceptionMessage = 
-"This program will move a selected downloaded certificate to the same folder as the program. (This is should be a USB or a certificate backup folder). It will then start the certloader program to install your HealthSecure certificate.
-   
-The downloaded certificate will be cert.p12 which is renamed to the required filename cert_<ddmmyy>.pfx."
+"This program will allow you to select a downloaded certificate to backup and then install. 
+
+The certificate backup will be in the same location as this program file (Which should be the recommended USB or secure fileshare).
+
+Note:
+The downloaded certificate will be named cert.p12. The backup is renamed to cert_<ddmmyy>.pfx or (#)cert_<ddmmyy>.pfx if more than one certificate exists for this filename. 
+The download file is removed in the process.
+
+Click OK to select the download file and start the install"
  
    $wshell.Popup($exceptionMessage, 0, "NZ Ministry of Health HealthSecure Certificate Install")
  
